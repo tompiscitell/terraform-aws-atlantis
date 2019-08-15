@@ -37,3 +37,8 @@ output "ecs_task_definition" {
   description = "Task definition for ECS service (used for external triggers)"
   value       = "${aws_ecs_service.atlantis.task_definition}"
 }
+
+output "ecs_cluster_arn" {
+  description = "ARN of the ECS cluster created for atlantis"
+  value = "${module.ecs.this_ecs_cluster_arn}"
+}
