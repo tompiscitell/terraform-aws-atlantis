@@ -43,12 +43,7 @@ output "ecs_cluster_arn" {
   value = "${module.ecs.this_ecs_cluster_arn}"
 }
 
-output "vpc_id" {
-  description = "VPC created for atlantis"
-  value = "${module.vpc.vpc_id}"
-}
-
 output "vpc_private_subnet" {
   description = "Private subnets created in atlantis VPC"
-  value = "${module.vpc.private_subnet}"
+  value = "${module.vpc.private_subnets}"
 }
